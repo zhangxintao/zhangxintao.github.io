@@ -13,9 +13,17 @@ categories:
 
 <!--more-->
 some c# code below:
-``` c# hello octopress
+``` C# hello octopress
 void Main()
 {
 	Console.WriteLine("Hello Octopress");
 }
 ```
+
+some javascript code:
+``` JavaScript document ready
+$( document ).ready(function() {
+    console.log( "ready!" );
+});
+```
+现在，加入中文，能否正确显示呢？
