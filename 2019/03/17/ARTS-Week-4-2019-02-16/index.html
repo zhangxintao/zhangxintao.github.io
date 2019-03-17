@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="ARTS,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Squares of a sorted array Sum of even numbers after queries Why your brain need idle time tmux">
+<meta name="keywords" content="ARTS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ARTS - Week 4 - 2019-02-16">
+<meta property="og:url" content="http://yoursite.com/2019/03/17/ARTS-Week-4-2019-02-16/index.html">
+<meta property="og:site_name" content="CodingPanda">
+<meta property="og:description" content="Squares of a sorted array Sum of even numbers after queries Why your brain need idle time tmux">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-03-17T15:01:26.285Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ARTS - Week 4 - 2019-02-16">
+<meta name="twitter:description" content="Squares of a sorted array Sum of even numbers after queries Why your brain need idle time tmux">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2019/03/17/ARTS-Week-4-2019-02-16/">
+
+
+
+
+
+  <title>ARTS - Week 4 - 2019-02-16 | CodingPanda</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">CodingPanda</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/ARTS-Week-4-2019-02-16/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="XinTao">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="CodingPanda">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">ARTS - Week 4 - 2019-02-16</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-17T22:59:30+08:00">
+                2019-03-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ul>
+<li><a href="https://leetcode.com/problems/squares-of-a-sorted-array/" target="_blank" rel="noopener">Squares of a sorted array</a></li>
+<li><a href="https://leetcode.com/problems/sum-of-even-numbers-after-queries/" target="_blank" rel="noopener">Sum of even numbers after queries</a></li>
+<li><a href="https://medium.com/s/the-nuance/why-your-brain-needs-idle-time-e5d90b0ef1df" target="_blank" rel="noopener">Why your brain need idle time</a></li>
+<li>tmux</li>
+</ul>
+<a id="more"></a>
+<h2 id="Alogrithms"><a href="#Alogrithms" class="headerlink" title="Alogrithms"></a>Alogrithms</h2><h3 id="Squares_of_a_sorted_array"><a href="#Squares_of_a_sorted_array" class="headerlink" title="Squares of a sorted array"></a><a href="https://leetcode.com/problems/squares-of-a-sorted-array/" target="_blank" rel="noopener">Squares of a sorted array</a></h3><h4 id="Analysis"><a href="#Analysis" class="headerlink" title="Analysis"></a>Analysis</h4><p>负数经过square之后，有可能会比正数的square大，例如，<figure class="highlight plain"><figcaption><span>-4*-4 > 3 * 3。影响square之后顺序的是每个数的绝对值，本身的正负无关。</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">思路： 把原数组中所有的负数转换成正数，然后对数组重新排序，此时的顺序就是square之后的顺序，最后对排序后的每个元素做square即可</span><br><span class="line"></span><br><span class="line">#### My Solution</span><br></pre></td></tr></table></figure></p>
+<p>class Solution {<br>    public int[] sortedSquares(int[] A) {<br>        int[] result = new int[A.length];</p>
+<pre><code>    for(int i = 0; i &lt; A.length; i++) {
+        if (A[i] &lt; 0) {
+            A[i] = 0 - A[i];
+        }
+    }
+
+    Arrays.sort(A);
+
+    for(int i = 0; i &lt; A.length; i++) {
+        result[i] = A[i] * A[i];
+    }
+
+    return result;
+}
+</code></pre><p>}<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### Comments</span><br><span class="line"><span class="number">1.</span> 我的解决方案中，把负数转换成正数的做法是多余的，直接算出原数组中每个数的平方值，然后排序即可，由于排序的存在，时间复杂度依然是O(NlgN)</span><br><span class="line"><span class="number">2.</span> 还有一种O(N)的解法，基本思路是，负数平方之后是降序排列，整数平方之后依然是升序排列，所以我们可以用两个指针i和j，i代表最大的负数的位置，j代表最小的正数的位置。i向数组前方依次读取平方后的负数，j向数组尾部依次读取平方后的正数，此时可以看成有两个升序排列的数组，我们只需要将这两个数组合并成一个有序数组即可</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### [Sum <span class="keyword">of</span> even numbers after queries](https:<span class="comment">//leetcode.com/problems/sum-of-even-numbers-after-queries/)</span></span><br><span class="line"></span><br><span class="line">#### Analysis</span><br><span class="line">关键在于，两数相加的结果有可能把奇数变成偶数，也可能把偶数变成奇数，也可能奇偶数不变。</span><br><span class="line"></span><br><span class="line">**思路<span class="number">1</span>：**</span><br><span class="line"></span><br><span class="line">穷举法，每次根据query对数组元素做完操作之后，重新计算当前数据中所有偶数的和。</span><br><span class="line"></span><br><span class="line">复杂度：O(MN), M为query的元素数，N为数组的元素数，由于每次query都需要遍历整个数组重新计算偶数和，故复杂度为O(MN)</span><br><span class="line"></span><br><span class="line">这种方法效率太低</span><br><span class="line"></span><br><span class="line">**思路<span class="number">2</span>:**</span><br><span class="line"></span><br><span class="line">先计算出初始数组中所有偶数的和，作为初始和。依然需要遍历query执行所有操作，考虑到会影响初始和的操作一定是发生了：<span class="number">1.</span>偶-&gt;奇 <span class="number">2.</span>奇-&gt;偶 <span class="number">3.</span>偶-&gt;偶 （数值变化）。所以，在每次执行query的时候，可以判断对于当前数组元素是否有符合以上三种情况的变化，然后基于当前的初始和，作相应的加减即可得出执行完当前query之后的和</span><br><span class="line"></span><br><span class="line">#### My Solution</span><br></pre></td></tr></table></figure></p>
+<p>class Solution {<br>    public int[] sumEvenAfterQueries(int[] A, int[][] queries) {<br>        int[] result = new int[queries.length];<br>        int sum = 0;</p>
+<pre><code>    for(int i = 0; i &lt; A.length; i++) {
+        if (A[i] % 2 == 0) {
+            sum += A[i];
+        }
+    }
+
+    for(int i = 0; i &lt; queries.length; i++) {
+        int index = queries[i][1];
+        int newval = A[index] + queries[i][0];
+        if(A[index] % 2 == 0 &amp;&amp; newval % 2 != 0) {
+            sum -= A[index];
+        } else if(A[index] % 2 == 0 &amp;&amp; newval % 2 == 0) {
+            sum += (newval - A[index]);
+        } else if(A[index] % 2 != 0 &amp;&amp; newval % 2 == 0) {
+            sum += newval;
+        }
+
+        A[index] = newval;
+        result[i] = sum;
+    }
+
+    return result;
+}
+</code></pre><p>}<br>```</p>
+<h4 id="Comments"><a href="#Comments" class="headerlink" title="Comments"></a>Comments</h4><ul>
+<li>official solution和我的思路一致</li>
+</ul>
+<h2 id="Read"><a href="#Read" class="headerlink" title="Read"></a>Read</h2><p><a href="https://medium.com/s/the-nuance/why-your-brain-needs-idle-time-e5d90b0ef1df" target="_blank" rel="noopener">Why your brain need idle time</a></p>
+<p>文章的主要观点是，我们的大脑需要一些放空(mind-wandering )时间。过度忙碌的大脑会影响消化吸收有意义的知识的能力。同时，放空主要是为了帮助大脑消化合并之前学习的内容，通常只需要5到15分钟就可以。但是，不要拿这些放空时间来做一些会吸引过多注意力的事情，比如听广播、看电视或者看小说，可以做一些不太需要大脑思考的肌肉运动，比如整理衣服、洗碟子。最后，文章建议每天可以花distraction-free的15分钟散散步。</p>
+<h4 id="My_Words"><a href="#My_Words" class="headerlink" title="My Words"></a>My Words</h4><p>这5-15分钟，和番茄工作法的间歇时间正好是一样的，所以其实严格践行<strong>番茄工作法</strong>对于大脑就是一种非常好的间歇性放空。同时，这种放空的状态，也是<strong>冥想</strong>的主要目的之一，不排斥这时候自然产生一些负面的思绪，但是相比于用其他吸引注意力的事情占用这种放空状态，了解、认识这些思绪是更有好处的。</p>
+<h4 id="u6458_u8981"><a href="#u6458_u8981" class="headerlink" title="摘要"></a>摘要</h4><ul>
+<li><p>When your brain is bombarded with novel stimuli or information, she says, it can struggle to generate purposefulness and meaning.</p>
+</li>
+<li><p>I think we need to recognize that the brain’s internal train of thought can be of value in itself</p>
+</li>
+<li><p>To learn something well, you need to study it for a while and then take a break</p>
+</li>
+<li><p>going for a walk in a quiet place, doing the dishes, or folding laundry - chores that may occupy your hands or body but that don’t require much from your brain</p>
+</li>
+<li><p>take a 15-minute, distraction-free walk in the middle of your day</p>
+</li>
+</ul>
+<h2 id="Technique"><a href="#Technique" class="headerlink" title="Technique"></a>Technique</h2><h4 id="problem"><a href="#problem" class="headerlink" title="problem"></a>problem</h4><p>开发中需要ssh到云端开发机上运行angular app (npm start)，但是如果网络或者当前session断开了，云端的server也会终止。</p>
+<h4 id="solution"><a href="#solution" class="headerlink" title="solution"></a>solution</h4><p><strong>tmux</strong>, 在云端开发机上安装tmux，ssh到云端之后先运行tmux，然后再npm start，这样即使ssh session断开了，云端的npm server也依然可以保持运行</p>
+<h2 id="Share"><a href="#Share" class="headerlink" title="Share"></a>Share</h2>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ARTS/" rel="tag"># ARTS</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/03/17/ARTS-Week-3-2018-12-22/" rel="next" title="ARTS - Week 3 - 2018-12-22">
+                <i class="fa fa-chevron-left"></i> ARTS - Week 3 - 2018-12-22
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/uploads/avatar.jpg" alt="XinTao">
+            
+              <p class="site-author-name" itemprop="name">XinTao</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Alogrithms"><span class="nav-number">1.</span> <span class="nav-text">Alogrithms</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Squares_of_a_sorted_array"><span class="nav-number">1.1.</span> <span class="nav-text">Squares of a sorted array</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#Analysis"><span class="nav-number">1.1.1.</span> <span class="nav-text">Analysis</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Comments"><span class="nav-number">1.1.2.</span> <span class="nav-text">Comments</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Read"><span class="nav-number">2.</span> <span class="nav-text">Read</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#My_Words"><span class="nav-number">2.0.1.</span> <span class="nav-text">My Words</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#u6458_u8981"><span class="nav-number">2.0.2.</span> <span class="nav-text">摘要</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Technique"><span class="nav-number">3.</span> <span class="nav-text">Technique</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#problem"><span class="nav-number">3.0.1.</span> <span class="nav-text">problem</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#solution"><span class="nav-number">3.0.2.</span> <span class="nav-text">solution</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Share"><span class="nav-number">4.</span> <span class="nav-text">Share</span></a></li></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">XinTao</span>
+
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="ARTS - Week 1">
+<meta name="description" content="Flip an Image Goodbye, Object Oriented Programming">
 <meta name="keywords" content="ARTS">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ARTS - Week 1 - 2018-12-15">
-<meta property="og:url" content="http://yoursite.com/2019/03/17/ARTS-Weeek-1-2018-12-15/index.html">
+<meta property="og:title" content="ARTS - Week 3 - 2018-12-22">
+<meta property="og:url" content="http://yoursite.com/2019/03/17/ARTS-Week-3-2018-12-22/index.html">
 <meta property="og:site_name" content="CodingPanda">
-<meta property="og:description" content="ARTS - Week 1">
+<meta property="og:description" content="Flip an Image Goodbye, Object Oriented Programming">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-03-17T14:14:08.841Z">
+<meta property="og:updated_time" content="2019-03-17T14:57:57.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ARTS - Week 1 - 2018-12-15">
-<meta name="twitter:description" content="ARTS - Week 1">
+<meta name="twitter:title" content="ARTS - Week 3 - 2018-12-22">
+<meta name="twitter:description" content="Flip an Image Goodbye, Object Oriented Programming">
 
 
 
@@ -120,13 +120,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/03/17/ARTS-Weeek-1-2018-12-15/">
+  <link rel="canonical" href="http://yoursite.com/2019/03/17/ARTS-Week-3-2018-12-22/">
 
 
 
 
 
-  <title>ARTS - Week 1 - 2018-12-15 | CodingPanda</title>
+  <title>ARTS - Week 3 - 2018-12-22 | CodingPanda</title>
   
 
 
@@ -243,7 +243,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/ARTS-Weeek-1-2018-12-15/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/03/17/ARTS-Week-3-2018-12-22/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="XinTao">
@@ -260,7 +260,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">ARTS - Week 1 - 2018-12-15</h1>
+          <h1 class="post-title" itemprop="name headline">ARTS - Week 3 - 2018-12-22</h1>
         
 
         <div class="post-meta">
@@ -272,7 +272,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-17T18:14:13+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-03-17T22:22:28+08:00">
                 2019-03-17
               </time>
             
@@ -310,17 +310,22 @@
       
 
       
-        <p>ARTS - Week 1<br><a id="more"></a></p>
-<h1 id="Algorithms"><a href="#Algorithms" class="headerlink" title="Algorithms"></a>Algorithms</h1><p><a href="https://leetcode.com/problems/climbing-stairs/" target="_blank" rel="noopener">Climbing Stairs</a></p>
-<p><strong>尝试1:</strong><br><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">2</span>) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> climbStairs(n - <span class="number">1</span>) + climbStairs(n - <span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>功能没有问题，但是，提交之后显示Timeout</p>
-<p><strong>尝试2：</strong></p>
-<p>分析之后发现，其实是一个递归剪枝问题。<br>例如，输入为n = 5:</p>
-<p>5 = 4 + 1 or 3 + 2</p>
-<p>4 = 3 + 1 or 2 + 2</p>
-<p>这里可以看到<strong>3</strong>是重复计算过的，所以为了提高效率，在递归过程中，可以用数组把计算过的缓存下来，避免重复计算，以此提高效率</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> &#123;</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">climbStairs</span><span class="params">(<span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">int</span>[] steps = <span class="keyword">new</span> <span class="keyword">int</span>[n+<span class="number">1</span>];</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> calculateSteps(steps, n);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="keyword">int</span> <span class="title">calculateSteps</span><span class="params">(<span class="keyword">int</span>[] steps, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">1</span>) <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        <span class="keyword">if</span> (n == <span class="number">2</span>) <span class="keyword">return</span> <span class="number">2</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> previous1 = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">int</span> previous2 = <span class="number">0</span>;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (steps[n<span class="number">-1</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            previous1 = steps[n<span class="number">-1</span>];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            steps[n<span class="number">-1</span>] = calculateSteps(steps, n<span class="number">-1</span>);</span><br><span class="line">            previous1 = steps[n<span class="number">-1</span>];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span> (steps[n<span class="number">-2</span>] &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            previous2 = steps[n<span class="number">-2</span>];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            steps[n - <span class="number">2</span>] = calculateSteps(steps, n<span class="number">-2</span>);</span><br><span class="line">            previous2 = steps[n<span class="number">-2</span>];</span><br><span class="line">        &#125;</span><br><span class="line">       </span><br><span class="line">        <span class="keyword">return</span> previous1 + previous2;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h1 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h1>
+        <ul>
+<li><a href="https://leetcode.com/problems/flipping-an-image/submissions/" target="_blank" rel="noopener">Flip an Image</a></li>
+<li><a href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53" target="_blank" rel="noopener">Goodbye, Object Oriented Programming</a><a id="more"></a>
+<h2 id="Algorithm"><a href="#Algorithm" class="headerlink" title="Algorithm"></a>Algorithm</h2><h3 id="Problem_3A_Flip_an_Image"><a href="#Problem_3A_Flip_an_Image" class="headerlink" title="Problem: Flip an Image"></a>Problem: <a href="https://leetcode.com/problems/flipping-an-image/submissions/" target="_blank" rel="noopener">Flip an Image</a></h3></li>
+</ul>
+<h5 id="Analysis_3A"><a href="#Analysis_3A" class="headerlink" title="Analysis:"></a>Analysis:</h5><p>输入是一个只包含0和1的矩阵，代表一张图片。要求Flip -&gt; Invert这张图片</p>
+<p>Flip: 即把每行头尾对调</p>
+<p>Invert: 即把所有0-&gt;1, 1-&gt;0</p>
+<p>思路： Invert只需要遍历数组然后用if-else赋值即可，Flip可以对每行设置一个头尾指针，然后从两端向中间兑换元素</p>
+<h5 id="Code_3A"><a href="#Code_3A" class="headerlink" title="Code:"></a>Code:</h5><figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">class Solution &#123;</span><br><span class="line">    public int<span class="string">[]</span><span class="string">[]</span> flipAndInvertImage(int<span class="string">[]</span><span class="string">[]</span> A) &#123;</span><br><span class="line">        </span><br><span class="line">        //flip</span><br><span class="line">        for(int i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">            for(int j = <span class="number">0</span>,k = A<span class="string">[i]</span>.length - <span class="number">1</span>; j &lt; k;j++, k--) &#123;</span><br><span class="line">                int temp = A<span class="string">[i]</span><span class="string">[j]</span>;</span><br><span class="line">                A<span class="string">[i]</span><span class="string">[j]</span> = A<span class="string">[i]</span><span class="string">[k]</span>;</span><br><span class="line">                A<span class="string">[i]</span><span class="string">[k]</span> = temp;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        //invert</span><br><span class="line">        for(int i = <span class="number">0</span>; i &lt; A.length; i++) &#123;</span><br><span class="line">            for (int j = <span class="number">0</span>; j &lt; A<span class="string">[i]</span>.length; j++) &#123;</span><br><span class="line">                if (A<span class="string">[i]</span><span class="string">[j]</span> == <span class="number">0</span>) A<span class="string">[i]</span><span class="string">[j]</span> = <span class="number">1</span>;</span><br><span class="line">                else A<span class="string">[i]</span><span class="string">[j]</span> = <span class="number">0</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        return A;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="Problem_3A_Array_Partition_I"><a href="#Problem_3A_Array_Partition_I" class="headerlink" title="Problem: Array Partition I"></a>Problem: <a href="https://leetcode.com/problems/array-partition-i/" target="_blank" rel="noopener">Array Partition I</a></h3><h5 id="Analysis_3A-1"><a href="#Analysis_3A-1" class="headerlink" title="Analysis:"></a>Analysis:</h5><p>输入是一个包含偶数个元素的数组，要求两两分组之后，取每个分组的最小值，然后对所有最小值求和，要求计算这个最小值和的最大值</p>
+<p>以题目中[1,4,3,2]为例，最小值1无论怎么组合都一定会被取到，最大值4无论怎么组合都一定不会被取到。由于每个数组所有数相加的总和是一定的，要让最小值的和最大，就要让每个组合的两个数尽量接近，这样就能把取最小值过程中的牺牲降到最低。</p>
+<p>思路： 对输入数组做一个排序，然后以step=2的间隙，依次取出所有的数相加，就是分组取最小值之后可能的最大和</p>
+<h5 id="Code_3A-1"><a href="#Code_3A-1" class="headerlink" title="Code:"></a>Code:</h5><figure class="highlight axapta"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Solution</span> </span>&#123;</span><br><span class="line">    <span class="keyword">public</span> <span class="keyword">int</span> arrayPairSum(<span class="keyword">int</span>[] nums) &#123;</span><br><span class="line">        Arrays.sort(nums);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">int</span> <span class="keyword">sum</span> = <span class="number">0</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; nums.length; i+=<span class="number">2</span>) &#123;</span><br><span class="line">            <span class="keyword">sum</span> += nums[i];</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">sum</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="Review"><a href="#Review" class="headerlink" title="Review"></a>Review</h2><p><a href="https://medium.com/@cscalfani/goodbye-object-oriented-programming-a59cda4c0e53" target="_blank" rel="noopener">Goodbye, Object Oriented Programming</a></p>
+
       
     </div>
     
@@ -350,8 +355,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/10/01/Sike_and_Learn/" rel="next" title="”死磕“与学习">
-                <i class="fa fa-chevron-left"></i> ”死磕“与学习
+              <a href="/2019/03/17/ARTS-Week-2-2018-12-16/" rel="next" title="ARTS - Week 2 - 2018-12-16">
+                <i class="fa fa-chevron-left"></i> ARTS - Week 2 - 2018-12-16
               </a>
             
           </div>
@@ -360,8 +365,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/03/17/ARTS-Week-2-2018-12-16/" rel="prev" title="ARTS - Week 2 - 2018-12-16">
-                ARTS - Week 2 - 2018-12-16 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/03/17/ARTS-Week-4-2019-02-16/" rel="prev" title="ARTS - Week 4 - 2019-02-16">
+                ARTS - Week 4 - 2019-02-16 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -496,7 +501,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Algorithms"><span class="nav-number">1.</span> <span class="nav-text">Algorithms</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Review"><span class="nav-number">2.</span> <span class="nav-text">Review</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm"><span class="nav-number">1.</span> <span class="nav-text">Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem_3A_Flip_an_Image"><span class="nav-number">1.1.</span> <span class="nav-text">Problem: Flip an Image</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Analysis_3A"><span class="nav-number">1.1.0.1.</span> <span class="nav-text">Analysis:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code_3A"><span class="nav-number">1.1.0.2.</span> <span class="nav-text">Code:</span></a></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Problem_3A_Array_Partition_I"><span class="nav-number">1.2.</span> <span class="nav-text">Problem: Array Partition I</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#Analysis_3A-1"><span class="nav-number">1.2.0.1.</span> <span class="nav-text">Analysis:</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#Code_3A-1"><span class="nav-number">1.2.0.2.</span> <span class="nav-text">Code:</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#Review"><span class="nav-number">2.</span> <span class="nav-text">Review</span></a></li></div>
             
 
           </div>
